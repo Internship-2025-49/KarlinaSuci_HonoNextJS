@@ -1,0 +1,17 @@
+{
+  "name": "hono-node",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.8",
+    "@prisma/client": "^5.13.0",
+    "hono": "^4.6.20"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "prisma": "^5.13.0",
+    "tsx": "^4.7.1"
+  }
+}
