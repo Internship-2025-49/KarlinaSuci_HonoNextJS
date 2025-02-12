@@ -1,8 +1,15 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { Routes } from './routes'
+import { cors } from 'hono/cors'
 
 const app = new Hono().basePath('/api')
+
+app.use('*', cors({
+  origin: 'http://localhost:3000',
+  allowMethods: ['GET','POST', 'PUT', 'DELETE'], 
+  allowHeaders: ["*"],
+}))
 
 app.get('/', (c) => {
   return c.text('Hello Hono!')
